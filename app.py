@@ -44,7 +44,7 @@ min_age_range, max_age_range = range_cols[2].slider("Lowest Age", float(min_age)
                                                                                             [float(min_age), float(max_age)])
 
 if name_query !="":
-    res = res.loc[rec.Name.str.contains(name_query)]
+    res = res.loc[res.Name.str.contains(name_query)]
 
 if survival:
     res = check_rows("Survived", survival)
